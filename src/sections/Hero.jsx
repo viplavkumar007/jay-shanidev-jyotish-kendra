@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { hero, brand, workshopDetails } from '../data/siteContent'
 
@@ -13,6 +14,9 @@ const stagger = {
 }
 
 export default function Hero() {
+  const [isMuted, setIsMuted] = useState(true)
+  const fbReelUrl = 'https://www.facebook.com/share/r/1ENofBB4fm/'
+
   return (
     <section
       id="home"
@@ -48,10 +52,20 @@ export default function Hero() {
             variants={stagger.container}
             initial="hidden"
             animate="show"
-            className="flex flex-col items-start gap-5"
+            className="flex flex-col items-start gap-5 md:-mt-10 lg:-mt-14"
           >
             {/* Badge */}
             <motion.div variants={stagger.item}>
+              <a
+                href={fbReelUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mb-3 inline-flex items-center gap-2 px-3 py-2 rounded-xl border border-blue-400/40 text-blue-100 bg-blue-950/40 hover:bg-blue-900/50 transition"
+                aria-label="Watch Facebook video reel"
+              >
+                <FacebookIcon className="w-4 h-4 text-blue-300" />
+                <span className="text-xs md:text-sm font-semibold">Watch Video on Facebook</span>
+              </a>
               <span
                 className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs md:text-sm font-bold text-cosmos-950 tracking-wide"
                 style={{
@@ -145,41 +159,34 @@ export default function Hero() {
               <img
                 src={hero.instructorImage}
                 alt="शनिसेवक शेषराज पाटील - Astrology Instructor"
-                className="relative z-10 w-full max-w-[320px] md:max-w-[400px] rounded-3xl object-cover object-top border-2 border-gold-500/30 shadow-[0_16px_64px_rgba(0,0,0,0.7)]"
-                style={{ minHeight: '360px', objectFit: 'cover' }}
+                className="relative z-10 w-full max-w-[150px] md:max-w-[195px] rounded-3xl object-cover object-top border-2 border-gold-500/30 shadow-[0_16px_64px_rgba(0,0,0,0.7)]"
+                style={{ minHeight: '240px', objectFit: 'cover' }}
                 loading="eager"
               />
-              {/* Floating badge */}
-              <motion.div
-                animate={{ y: [0, -8, 0] }}
-                transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
-                className="absolute -top-4 -left-4 bg-gradient-to-br from-amber-500 to-red-600 text-white text-xs font-bold px-3 py-2 rounded-2xl shadow-lg border border-white/10"
-              >
-                🏆 Pro Level
-              </motion.div>
-              <motion.div
-                animate={{ y: [0, 8, 0] }}
-                transition={{ duration: 3.5, repeat: Infinity, ease: 'easeInOut', delay: 1 }}
-                className="absolute -bottom-2 -right-4 bg-gradient-to-br from-emerald-500 to-teal-600 text-white text-xs font-bold px-3 py-2 rounded-2xl shadow-lg border border-white/10"
-              >
-                ✅ 100% Free
-              </motion.div>
             </div>
 
             {/* Video preview card */}
             <div
-              className="relative w-full max-w-[380px] rounded-2xl overflow-hidden border border-gold-500/30 shadow-[0_8px_32px_rgba(0,0,0,0.6)]"
+              className="relative mt-1 md:mt-2 w-full max-w-[520px] rounded-2xl overflow-hidden border border-gold-500/30 shadow-[0_8px_32px_rgba(0,0,0,0.6)]"
               style={{ background: 'rgba(10,14,39,0.9)' }}
             >
               <video
                 src={hero.videoSrc}
                 autoPlay
-                muted
+                muted={isMuted}
                 loop
                 playsInline
-                className="w-full h-48 object-cover"
+                className="w-full h-64 md:h-72 object-contain bg-cosmos-950/70"
                 aria-label="Workshop preview video"
               />
+              <button
+                type="button"
+                onClick={() => setIsMuted((prev) => !prev)}
+                className="absolute top-3 right-3 px-3 py-1.5 rounded-lg text-xs font-semibold text-white bg-black/60 border border-white/20 hover:bg-black/75 transition"
+                aria-label={isMuted ? 'Unmute video' : 'Mute video'}
+              >
+                {isMuted ? 'Listen Sound / आवाज ऐका' : 'Mute / आवाज बंद'}
+              </button>
               <div className="px-4 py-3 flex items-center gap-2">
                 <span className="flex items-center gap-1.5 text-xs text-emerald-400 font-bold">
                   <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse inline-block" />
@@ -237,3 +244,13 @@ function WhatsAppIcon({ className }) {
     </svg>
   )
 }
+
+function FacebookIcon({ className }) {
+  return (
+    <svg className={className} fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073c0 6.019 4.388 11.009 10.125 11.927v-8.437H7.078v-3.49h3.047V9.41c0-3.017 1.792-4.686 4.533-4.686 1.313 0 2.686.235 2.686.235v2.961h-1.514c-1.492 0-1.956.93-1.956 1.885v2.268h3.328l-.532 3.49h-2.796V24C19.612 23.082 24 18.092 24 12.073z" />
+    </svg>
+  )
+}
+
+
