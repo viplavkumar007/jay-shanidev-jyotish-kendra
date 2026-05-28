@@ -26,6 +26,17 @@ const icons = {
   )
 }
 
+const workshopPosters = [
+  { src: '/assets/workshop-posters/poster-1.jpeg', title: 'Prediction Formula System' },
+  { src: '/assets/workshop-posters/poster-2.jpeg', title: 'Pro Level कुंडली फलादेश कार्यशाळा' },
+  { src: '/assets/workshop-posters/poster-3.jpeg', title: 'कोर्स ब्रॉशर आणि Enroll माहिती' },
+  { src: '/assets/workshop-posters/poster-4.jpeg', title: '५ दिवसीय फ्री वर्कशॉप प्लॅन' },
+  { src: '/assets/workshop-posters/poster-5.jpeg', title: 'कुंडली कशी सोडवावी - बेसिक्स ते अॅडव्हान्स' },
+  { src: '/assets/workshop-posters/poster-6.jpeg', title: 'LIVE कुंडली सोडवण्याचा क्लास' },
+  { src: '/assets/workshop-posters/poster-7.jpeg', title: 'फलादेशातील अडचणींचे समाधान' },
+  { src: '/assets/workshop-posters/poster-8.jpeg', title: 'Professional Astrology System Highlights' }
+]
+
 export default function WorkshopSection() {
   const [ref, isVisible] = useScrollReveal(0.15)
 
@@ -79,6 +90,35 @@ export default function WorkshopSection() {
               </div>
             </motion.div>
           ))}
+        </div>
+
+        <div className="mt-12 md:mt-16">
+          <div className="text-center mb-6">
+            <h3 className="font-marathi text-2xl md:text-3xl font-bold text-gold-300">वर्कशॉप पोस्टर्स</h3>
+            <p className="text-white/60 text-sm md:text-base mt-2">कार्यशाळेशी संबंधित माहिती आणि हायलाइट्स</p>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
+            {workshopPosters.map((poster, i) => (
+              <motion.figure
+                key={poster.src}
+                initial={{ opacity: 0, y: 24 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.2 }}
+                transition={{ duration: 0.45, delay: i * 0.05 }}
+                className="gold-border-card p-3"
+              >
+                <img
+                  src={poster.src}
+                  alt={poster.title}
+                  loading="lazy"
+                  className="w-full rounded-xl object-cover"
+                />
+                <figcaption className="mt-3 text-center font-marathi text-sm md:text-base text-gold-100">
+                  {poster.title}
+                </figcaption>
+              </motion.figure>
+            ))}
+          </div>
         </div>
 
         {/* CTA after section */}
