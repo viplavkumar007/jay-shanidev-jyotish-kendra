@@ -9,9 +9,7 @@ export const brand = {
   phone: '7507536502',
   phoneDisplay: '+91 75075 36502',
   email: 'jayshanidevjyotishkendra@gmail.com',
-  whatsappGroup: 'https://wa.me/message/CVHJZGKYHWMTF1',
-  whatsappCommunity: 'https://chat.whatsapp.com/GxgEgnqrYeu1hIm2rGopN8',
-  whatsappDirect: 'https://wa.me/917507536502'
+  whatsappCommunity: 'https://chat.whatsapp.com/GxgEgnqrYeu1hIm2rGopN8'
 };
 
 export const hero = {
@@ -21,7 +19,7 @@ export const hero = {
   subheadline: 'ग्रह समजतात… पण त्यांचा नेमका परिणाम कधी आणि कसा होईल हे समजत नाही?',
   supporting:
     'येथेच तर खरे ज्योतिष चालू होते. तुम्हाला ज्योतिष अभ्यासाची नाही, तर फलादेश सूत्र आणि पद्धतीची गरज आहे.',
-  primaryCta: 'Chat on WhatsApp',
+  primaryCta: 'Join WhatsApp Community',
   secondaryCta: 'Workshop Details पहा',
   videoSrc: '/assets/workshop-preview.mp4',
   instructorImage: '/assets/instructor.jpeg'
@@ -173,7 +171,7 @@ export const trust = {
 export const finalCta = {
   headline: 'आजच नोंदणी करा आणि फलादेशाच्या कलेत प्रावीण्य मिळवा!',
   sub: 'जागा मर्यादित आहेत. लवकर नोंदणी करा.',
-  button: 'Chat on WhatsApp'
+  button: 'Join WhatsApp Community'
 };
 
 export const navLinks = [
@@ -189,3 +187,4 @@ export const footer = {
   text: 'जय शनिदेव ज्योतिष केंद्र | Online Jyotish Classes | Kundali Analysis | Pro Level Prediction Workshop',
   copyright: `© ${new Date().getFullYear()} जय शनिदेव ज्योतिष केंद्र. सर्व हक्क राखीव.`
 };
+

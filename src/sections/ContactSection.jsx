@@ -32,10 +32,8 @@ export default function ContactSection() {
     if (Object.keys(errs).length) { setErrors(errs); return }
 
     setLoading(true)
-
-    // Build WhatsApp message
     const waMsg = encodeURIComponent(
-      `🙏 नमस्कार सर!\n\nमला Pro Level कुंडली फलादेश कार्यशाळेसाठी नोंदणी करायची आहे.\n\n👤 नाव: ${form.name}\n📱 फोन: ${form.phone}${form.email ? `\n📧 Email: ${form.email}` : ''}${form.message ? `\n💬 संदेश: ${form.message}` : ''}\n\n✅ Jay Shanidev Jyotish Kendra`
+      `Namaskar Sir, I want to register for the workshop.%0A%0AName: ${form.name}%0APhone: ${form.phone}${form.email ? `%0AEmail: ${form.email}` : ''}${form.message ? `%0AMessage: ${form.message}` : ''}`
     )
     const waUrl = `https://wa.me/91${brand.phone}?text=${waMsg}`
 
@@ -142,7 +140,7 @@ export default function ContactSection() {
 
             {/* WhatsApp Group CTA card */}
             <motion.a
-              href={brand.whatsappGroup}
+              href={brand.whatsappCommunity}
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.02, y: -3 }}
@@ -158,7 +156,7 @@ export default function ContactSection() {
                 <WhatsAppIcon className="w-6 h-6 text-white" />
               </div>
               <div className="flex-1">
-                <div className="font-marathi font-bold text-emerald-300 text-base">Chat on WhatsApp</div>
+                <div className="font-marathi font-bold text-emerald-300 text-base">Join WhatsApp Community</div>
                 <div className="text-white/50 text-xs font-sans mt-0.5">Click करून आत्ताच Join व्हा!</div>
               </div>
               <svg className="w-5 h-5 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -322,3 +320,6 @@ function WhatsAppIcon({ className }) {
     </svg>
   )
 }
+
+
+

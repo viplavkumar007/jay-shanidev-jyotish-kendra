@@ -79,7 +79,7 @@ export default function BenefitsSection() {
           </div>
           <div className="sm:ml-auto">
             <a
-              href={brand.whatsappGroup}
+              href={brand.whatsappCommunity}
               target="_blank"
               rel="noopener noreferrer"
               className="btn-whatsapp py-4 px-10 text-base"
@@ -102,3 +102,4 @@ function WhatsAppIcon({ className }) {
     </svg>
   )
 }
+

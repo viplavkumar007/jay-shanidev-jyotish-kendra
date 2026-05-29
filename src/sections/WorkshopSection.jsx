@@ -130,7 +130,7 @@ export default function WorkshopSection() {
           className="flex justify-center mt-10"
         >
           <a
-            href={brand.whatsappGroup}
+            href={brand.whatsappCommunity}
             target="_blank"
             rel="noopener noreferrer"
             className="btn-whatsapp text-base py-4 px-10"
@@ -152,3 +152,4 @@ function WhatsAppIcon({ className }) {
     </svg>
   )
 }
+

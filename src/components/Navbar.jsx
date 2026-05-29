@@ -1,4 +1,4 @@
-﻿import { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { brand, navLinks } from '../data/siteContent'
 import { useActiveSection } from '../hooks/useScrollReveal'
@@ -84,17 +84,6 @@ export default function Navbar() {
 
           <div className="hidden md:flex items-center gap-2">
             <motion.a
-              href={brand.whatsappGroup}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-whatsapp attention-shake text-sm py-2.5 px-4"
-              animate={{ x: [0, -3.5, 3.5, -2.5, 2.5, 0], rotate: [0, -0.7, 0.7, -0.3, 0.3, 0] }}
-              transition={{ duration: 0.75, repeat: Infinity, repeatDelay: 1.8, ease: 'easeInOut' }}
-            >
-              <WhatsAppIcon className="w-4 h-4" />
-              Chat on WhatsApp
-            </motion.a>
-            <motion.a
               href={brand.whatsappCommunity}
               target="_blank"
               rel="noopener noreferrer"
@@ -146,19 +135,6 @@ export default function Navbar() {
               ))}
 
               <motion.a
-                href={brand.whatsappGroup}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-whatsapp attention-shake mt-2 text-sm"
-                onClick={() => setMenuOpen(false)}
-                animate={{ x: [0, -3, 3, -2, 2, 0], rotate: [0, -0.6, 0.6, 0] }}
-                transition={{ duration: 0.7, repeat: Infinity, repeatDelay: 1.8, ease: 'easeInOut' }}
-              >
-                <WhatsAppIcon className="w-4 h-4" />
-                Chat on WhatsApp
-              </motion.a>
-
-              <motion.a
                 href={brand.whatsappCommunity}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -168,7 +144,7 @@ export default function Navbar() {
                 transition={{ duration: 0.7, repeat: Infinity, repeatDelay: 2.1, ease: 'easeInOut' }}
               >
                 <WhatsAppIcon className="w-4 h-4" />
-                WhatsApp Community Join करा
+                Join WhatsApp Community
               </motion.a>
             </div>
           </motion.div>
@@ -186,3 +162,5 @@ function WhatsAppIcon({ className }) {
     </svg>
   )
 }
+
+

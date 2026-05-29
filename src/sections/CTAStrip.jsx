@@ -62,7 +62,7 @@ export default function CTAStrip() {
           className="flex flex-col sm:flex-row gap-4 justify-center"
         >
           <a
-            href={brand.whatsappGroup}
+            href={brand.whatsappCommunity}
             target="_blank"
             rel="noopener noreferrer"
             className="btn-whatsapp py-5 px-12 text-lg"
@@ -103,4 +103,3 @@ function WhatsAppIcon({ className }) {
     </svg>
   )
 }
-

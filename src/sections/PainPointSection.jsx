@@ -79,7 +79,7 @@ export default function PainPointSection() {
           className="mt-8 flex justify-center"
         >
           <a
-            href={brand.whatsappGroup}
+            href={brand.whatsappCommunity}
             target="_blank"
             rel="noopener noreferrer"
             className="btn-ember py-4 px-10 text-base"
@@ -91,3 +91,4 @@ export default function PainPointSection() {
     </RevealSection>
   )
 }
+

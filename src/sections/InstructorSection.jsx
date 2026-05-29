@@ -111,7 +111,7 @@ export default function InstructorSection() {
             </div>
 
             <a
-              href={brand.whatsappGroup}
+              href={brand.whatsappCommunity}
               target="_blank"
               rel="noopener noreferrer"
               className="btn-gold w-fit text-base py-4 px-8"
@@ -124,3 +124,4 @@ export default function InstructorSection() {
     </RevealSection>
   )
 }
+

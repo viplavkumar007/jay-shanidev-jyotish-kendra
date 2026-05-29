@@ -109,7 +109,7 @@ export default function FAQSection() {
             आणखी प्रश्न आहेत? आम्हाला WhatsApp करा!
           </p>
           <a
-            href={brand.whatsappDirect}
+            href={brand.whatsappCommunity}
             target="_blank"
             rel="noopener noreferrer"
             className="btn-whatsapp py-3.5 px-8 text-sm"
@@ -131,3 +131,4 @@ function WhatsAppIcon({ className }) {
     </svg>
   )
 }
+

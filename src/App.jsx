@@ -50,13 +50,13 @@ export default function App() {
 
             <div className="flex justify-center">
               <a
-                href="https://wa.me/message/CVHJZGKYHWMTF1"
+                href="https://chat.whatsapp.com/GxgEgnqrYeu1hIm2rGopN8"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-whatsapp py-5 px-12 text-lg"
               >
                 <WhatsAppIcon className="w-6 h-6" />
-                Chat on WhatsApp
+                Join WhatsApp Community
               </a>
             </div>
           </div>
@@ -83,4 +83,3 @@ function WhatsAppIcon({ className }) {
     </svg>
   )
 }
-

@@ -122,9 +122,9 @@ export default function LearnSection() {
           transition={{ delay: 0.4 }}
           className="flex flex-col sm:flex-row gap-3 justify-center mt-12"
         >
-          <a href={brand.whatsappGroup} target="_blank" rel="noopener noreferrer" className="btn-whatsapp py-4 px-10 text-base">
+          <a href={brand.whatsappCommunity} target="_blank" rel="noopener noreferrer" className="btn-whatsapp py-4 px-10 text-base">
             <WhatsAppIcon className="w-5 h-5" />
-            Chat on WhatsApp
+            Join WhatsApp Community
           </a>
         </motion.div>
       </div>
@@ -140,3 +140,4 @@ function WhatsAppIcon({ className }) {
     </svg>
   )
 }
+

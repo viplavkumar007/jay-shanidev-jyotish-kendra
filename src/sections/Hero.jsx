@@ -116,17 +116,6 @@ export default function Hero() {
                         {/* CTA Buttons */}
             <motion.div variants={stagger.item} className="relative z-20 flex flex-col sm:flex-row sm:flex-wrap gap-2 w-full sm:w-auto">
               <motion.a
-                href={brand.whatsappGroup}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="relative z-20 pointer-events-auto btn-whatsapp attention-shake text-xs md:text-sm py-2.5 px-4 md:px-5 whitespace-nowrap w-fit"
-                animate={{ x: [0, -4, 4, -3, 3, 0], rotate: [0, -0.8, 0.8, -0.4, 0.4, 0] }}
-                transition={{ duration: 0.75, repeat: Infinity, repeatDelay: 1.6, ease: 'easeInOut' }}
-              >
-                <WhatsAppIcon className="w-4 h-4" />
-                {hero.primaryCta}
-              </motion.a>
-              <motion.a
                 href={brand.whatsappCommunity}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -269,6 +258,7 @@ function FacebookIcon({ className }) {
     </svg>
   )
 }
+
 
 
 
