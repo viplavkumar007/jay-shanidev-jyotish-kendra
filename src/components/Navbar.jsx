@@ -92,7 +92,7 @@ export default function Navbar() {
               transition={{ duration: 0.75, repeat: Infinity, repeatDelay: 1.8, ease: 'easeInOut' }}
             >
               <WhatsAppIcon className="w-4 h-4" />
-              Join Now
+              Chat on WhatsApp
             </motion.a>
             <motion.a
               href={brand.whatsappCommunity}
@@ -155,7 +155,7 @@ export default function Navbar() {
                 transition={{ duration: 0.7, repeat: Infinity, repeatDelay: 1.8, ease: 'easeInOut' }}
               >
                 <WhatsAppIcon className="w-4 h-4" />
-                WhatsApp Group Join करा
+                Chat on WhatsApp
               </motion.a>
 
               <motion.a

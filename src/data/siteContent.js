@@ -9,7 +9,7 @@ export const brand = {
   phone: '7507536502',
   phoneDisplay: '+91 75075 36502',
   email: 'jayshanidevjyotishkendra@gmail.com',
-  whatsappGroup: 'https://chat.whatsapp.com/GxHhcw7RP0AD8lqWDDy9Re',
+  whatsappGroup: 'https://wa.me/message/CVHJZGKYHWMTF1',
   whatsappCommunity: 'https://chat.whatsapp.com/GxgEgnqrYeu1hIm2rGopN8',
   whatsappDirect: 'https://wa.me/917507536502'
 };
@@ -21,7 +21,7 @@ export const hero = {
   subheadline: 'ग्रह समजतात… पण त्यांचा नेमका परिणाम कधी आणि कसा होईल हे समजत नाही?',
   supporting:
     'येथेच तर खरे ज्योतिष चालू होते. तुम्हाला ज्योतिष अभ्यासाची नाही, तर फलादेश सूत्र आणि पद्धतीची गरज आहे.',
-  primaryCta: 'WhatsApp Group Join करा',
+  primaryCta: 'Chat on WhatsApp',
   secondaryCta: 'Workshop Details पहा',
   videoSrc: '/assets/workshop-preview.mp4',
   instructorImage: '/assets/instructor.jpeg'
@@ -173,7 +173,7 @@ export const trust = {
 export const finalCta = {
   headline: 'आजच नोंदणी करा आणि फलादेशाच्या कलेत प्रावीण्य मिळवा!',
   sub: 'जागा मर्यादित आहेत. लवकर नोंदणी करा.',
-  button: 'Join WhatsApp Group Now'
+  button: 'Chat on WhatsApp'
 };
 
 export const navLinks = [

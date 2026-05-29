@@ -50,13 +50,13 @@ export default function App() {
 
             <div className="flex justify-center">
               <a
-                href="https://chat.whatsapp.com/GxHhcw7RP0AD8lqWDDy9Re"
+                href="https://wa.me/message/CVHJZGKYHWMTF1"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-whatsapp py-5 px-12 text-lg"
               >
                 <WhatsAppIcon className="w-6 h-6" />
-                Join WhatsApp Group - FREE Workshop!
+                Chat on WhatsApp
               </a>
             </div>
           </div>

@@ -124,7 +124,7 @@ export default function LearnSection() {
         >
           <a href={brand.whatsappGroup} target="_blank" rel="noopener noreferrer" className="btn-whatsapp py-4 px-10 text-base">
             <WhatsAppIcon className="w-5 h-5" />
-            Join WhatsApp Group – Free!
+            Chat on WhatsApp
           </a>
         </motion.div>
       </div>

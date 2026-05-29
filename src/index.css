@@ -186,3 +186,11 @@
     animation-delay: 0.45s;
   }
 }
+
+.floating-wa-btn {
+  position: fixed !important;
+  right: max(14px, env(safe-area-inset-right)) !important;
+  bottom: max(14px, env(safe-area-inset-bottom)) !important;
+  z-index: 2147483647 !important;
+  isolation: isolate;
+}

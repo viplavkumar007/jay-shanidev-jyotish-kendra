@@ -158,7 +158,7 @@ export default function ContactSection() {
                 <WhatsAppIcon className="w-6 h-6 text-white" />
               </div>
               <div className="flex-1">
-                <div className="font-marathi font-bold text-emerald-300 text-base">WhatsApp Group Join करा</div>
+                <div className="font-marathi font-bold text-emerald-300 text-base">Chat on WhatsApp</div>
                 <div className="text-white/50 text-xs font-sans mt-0.5">Click करून आत्ताच Join व्हा!</div>
               </div>
               <svg className="w-5 h-5 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
