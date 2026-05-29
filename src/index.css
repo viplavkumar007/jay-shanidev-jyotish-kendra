@@ -166,4 +166,23 @@
   .bg-cosmos {
     background: radial-gradient(ellipse at top, #1e2660 0%, #0a0e27 50%, #05060f 100%);
   }
+
+  @keyframes attention-shake {
+    0%, 100% { transform: translateX(0) rotate(0deg); }
+    12% { transform: translateX(-4px) rotate(-0.8deg); }
+    24% { transform: translateX(4px) rotate(0.8deg); }
+    36% { transform: translateX(-3px) rotate(-0.5deg); }
+    48% { transform: translateX(3px) rotate(0.5deg); }
+    60% { transform: translateX(0) rotate(0deg); }
+  }
+
+  .attention-shake {
+    animation: attention-shake 1.1s ease-in-out infinite;
+    animation-delay: 0.1s;
+  }
+
+  .attention-shake-alt {
+    animation: attention-shake 1.1s ease-in-out infinite;
+    animation-delay: 0.45s;
+  }
 }

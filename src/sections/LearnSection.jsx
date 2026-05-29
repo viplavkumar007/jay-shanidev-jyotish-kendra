@@ -16,6 +16,19 @@ const cardColors = [
   'from-fuchsia-500 to-purple-600'
 ]
 
+const outcomeLines = [
+  ['अचूक timing ओळखून फलादेश करा', 'घटना कधी घडेल हे आत्मविश्वासाने सांगा'],
+  ['Dasha + Gochar एकत्र वापरून निर्णय घ्या', 'Confusion कमी, Accuracy जास्त'],
+  ['विवाह योग आहे का ते तपासा', 'Love Marriage की Arranged Marriage ओळखा'],
+  ['Chart reading ची practical flow शिका', 'Client chart पटकन analyze करा'],
+  ['गोचरचा प्रत्यक्ष परिणाम ओळखा', 'Period-wise prediction मजबूत करा'],
+  ['Strong vs weak combinations लगेच पकडा', 'Shortcuts ऐवजी validated technique वापरा'],
+  ['Live charts वरून confidence build करा', 'Real केस हाताळण्याची तयारी करा'],
+  ['Beginner ते Pro clear roadmap मिळवा', 'Step-wise practice plan तयार करा'],
+  ['दोष आणि योगचे practical impact ओळखा', 'Counter-check method ने चुका टाळा'],
+  ['व्यावसायिक शैलीत फलादेश मांडायला शिका', 'Consultation confidence वाढवा']
+]
+
 export default function LearnSection() {
   const [ref, isVisible] = useScrollReveal(0.1)
 
@@ -83,6 +96,13 @@ export default function LearnSection() {
                   <p className="text-white/50 text-xs font-sans leading-relaxed">
                     {item.desc}
                   </p>
+                  <div className="mt-2 space-y-1">
+                    {outcomeLines[i]?.map((line) => (
+                      <p key={line} className="text-emerald-300/90 text-xs font-marathi leading-snug">
+                        ✅ {line}
+                      </p>
+                    ))}
+                  </div>
                 </div>
               </div>
 

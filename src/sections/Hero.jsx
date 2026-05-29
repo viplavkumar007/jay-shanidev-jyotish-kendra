@@ -113,21 +113,34 @@ export default function Hero() {
               ))}
             </motion.div>
 
-            {/* CTA Buttons */}
-            <motion.div variants={stagger.item} className="flex flex-col sm:flex-row gap-3 w-full sm:w-auto">
-              <a
+                        {/* CTA Buttons */}
+            <motion.div variants={stagger.item} className="relative z-20 flex flex-col sm:flex-row sm:flex-wrap gap-2 w-full sm:w-auto">
+              <motion.a
                 href={brand.whatsappGroup}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-whatsapp text-base py-4 px-8"
+                className="relative z-20 pointer-events-auto btn-whatsapp attention-shake text-xs md:text-sm py-2.5 px-4 md:px-5 whitespace-nowrap w-fit"
+                animate={{ x: [0, -4, 4, -3, 3, 0], rotate: [0, -0.8, 0.8, -0.4, 0.4, 0] }}
+                transition={{ duration: 0.75, repeat: Infinity, repeatDelay: 1.6, ease: 'easeInOut' }}
               >
-                <WhatsAppIcon className="w-5 h-5" />
+                <WhatsAppIcon className="w-4 h-4" />
                 {hero.primaryCta}
-              </a>
+              </motion.a>
+              <motion.a
+                href={brand.whatsappCommunity}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="relative z-20 pointer-events-auto btn-gold attention-shake-alt text-xs md:text-sm py-2.5 px-4 md:px-5 whitespace-nowrap w-fit"
+                animate={{ x: [0, 4, -4, 3, -3, 0], rotate: [0, 0.8, -0.8, 0.4, -0.4, 0] }}
+                transition={{ duration: 0.75, repeat: Infinity, repeatDelay: 1.9, ease: 'easeInOut' }}
+              >
+                <WhatsAppIcon className="w-4 h-4" />
+                WhatsApp Community Join करा
+              </motion.a>
               <a
                 href="#workshop"
                 onClick={(e) => { e.preventDefault(); document.getElementById('workshop')?.scrollIntoView({ behavior: 'smooth' }) }}
-                className="btn-gold text-base py-4 px-8"
+                className="relative z-20 pointer-events-auto btn-gold text-xs md:text-sm py-2.5 px-4 md:px-5 whitespace-nowrap w-fit"
               >
                 ✨ {hero.secondaryCta}
               </a>
@@ -143,14 +156,14 @@ export default function Hero() {
           </motion.div>
 
           {/* Right — Instructor image + video */}
-          <motion.div
-            initial={{ opacity: 0, x: 60 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.5, ease: [0.22, 1, 0.36, 1] }}
-            className="relative flex flex-col items-center gap-4"
-          >
+          <div className="relative flex flex-col items-center gap-4">
             {/* Instructor photo */}
-            <div className="relative">
+            <motion.div
+              initial={{ opacity: 0, y: -130, scale: 0.9, rotate: -3, filter: 'blur(10px)' }}
+              animate={{ opacity: 1, y: 0, scale: 1, rotate: 0, filter: 'blur(0px)' }}
+              transition={{ duration: 1.5, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
+              className="relative"
+            >
               {/* Glow ring */}
               <div
                 className="absolute inset-0 rounded-3xl animate-pulse-glow pointer-events-none"
@@ -163,10 +176,14 @@ export default function Hero() {
                 style={{ minHeight: '240px', objectFit: 'cover' }}
                 loading="eager"
               />
-            </div>
+            </motion.div>
 
             {/* Video preview card */}
-            <div
+            <motion.div
+              initial={{ opacity: 0, x: 260, scale: 0.92, filter: 'blur(12px)' }}
+              animate={{ opacity: 1, x: 0, scale: 1, filter: 'blur(0px)' }}
+              transition={{ duration: 1.65, delay: 0.75, ease: [0.16, 1, 0.3, 1] }}
+              whileHover={{ y: -4, scale: 1.01 }}
               className="relative mt-1 md:mt-2 w-full max-w-[520px] rounded-2xl overflow-hidden border border-gold-500/30 shadow-[0_8px_32px_rgba(0,0,0,0.6)]"
               style={{ background: 'rgba(10,14,39,0.9)' }}
             >
@@ -194,8 +211,8 @@ export default function Hero() {
                 </span>
                 <span className="ml-auto text-xs text-gold-400/60">10 June ▶</span>
               </div>
-            </div>
-          </motion.div>
+            </motion.div>
+          </div>
         </div>
       </div>
 
@@ -252,5 +269,7 @@ function FacebookIcon({ className }) {
     </svg>
   )
 }
+
+
 
 

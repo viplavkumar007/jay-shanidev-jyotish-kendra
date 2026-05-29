@@ -101,10 +101,10 @@ export default function WorkshopSection() {
             {workshopPosters.map((poster, i) => (
               <motion.figure
                 key={poster.src}
-                initial={{ opacity: 0, y: 24 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: 60, scale: 0.94 }}
+                whileInView={{ opacity: 1, y: 0, scale: 1 }}
                 viewport={{ once: true, amount: 0.2 }}
-                transition={{ duration: 0.45, delay: i * 0.05 }}
+                transition={{ duration: 1.05, delay: i * 0.14, ease: [0.22, 1, 0.36, 1] }}
                 className="gold-border-card p-3"
               >
                 <img

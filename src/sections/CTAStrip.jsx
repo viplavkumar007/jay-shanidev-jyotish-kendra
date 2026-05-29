@@ -1,10 +1,9 @@
-import { motion } from 'framer-motion'
-import { finalCta, trust, brand } from '../data/siteContent'
+﻿import { motion } from 'framer-motion'
+import { brand } from '../data/siteContent'
 
 export default function CTAStrip() {
   return (
     <section className="py-16 md:py-20 relative overflow-hidden">
-      {/* Animated pulse background */}
       <motion.div
         className="absolute inset-0 pointer-events-none"
         animate={{
@@ -18,27 +17,22 @@ export default function CTAStrip() {
         aria-hidden="true"
       />
 
-      {/* Top border glow */}
       <div className="absolute top-0 left-0 right-0 h-px" style={{ background: 'linear-gradient(90deg, transparent, rgba(244,196,48,0.6), transparent)' }} aria-hidden="true" />
       <div className="absolute bottom-0 left-0 right-0 h-px" style={{ background: 'linear-gradient(90deg, transparent, rgba(244,196,48,0.6), transparent)' }} aria-hidden="true" />
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 relative z-10 text-center">
-        {/* Urgency lines */}
-        <div className="flex flex-col sm:flex-row justify-center gap-3 flex-wrap mb-8">
-          {trust.lines.map((line, i) => (
-            <motion.div
-              key={i}
-              initial={{ opacity: 0, y: 12 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.1 }}
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-marathi font-semibold text-gold-200"
-              style={{ background: 'rgba(244,196,48,0.1)', border: '1px solid rgba(244,196,48,0.2)' }}
-            >
-              {i === 0 ? '⭐' : i === 1 ? '🔔' : '⚡'} {line}
-            </motion.div>
-          ))}
-        </div>
+        <motion.div
+          initial={{ opacity: 0, y: 12 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="inline-block mb-6 px-5 py-3 rounded-xl border border-red-400/40"
+          style={{ background: 'linear-gradient(135deg, rgba(120,20,10,0.3) 0%, rgba(10,14,39,0.85) 100%)' }}
+        >
+          <p className="font-marathi text-rose-300 font-bold text-sm md:text-base">⚠️ मर्यादित प्रवेश • ⏳ Seats Filling Fast • 🔥 आजच जागा निश्चित करा</p>
+        </motion.div>
+
+        <p className="font-marathi text-white/85 text-lg md:text-2xl font-semibold mb-2">"कुंडली पाहणारे अनेक असतात..."</p>
+        <p className="font-marathi text-gold-300 text-lg md:text-2xl font-semibold mb-4">"पण अचूक फलादेश करणारे थोडेच असतात!"</p>
 
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
@@ -47,7 +41,7 @@ export default function CTAStrip() {
           transition={{ delay: 0.2 }}
           className="font-marathi text-2xl md:text-4xl font-bold text-white mb-3 leading-tight"
         >
-          {finalCta.headline}
+          🔱 PRO LEVEL कुंडली फलादेश कार्यशाळा 🔱
         </motion.h2>
 
         <motion.p
@@ -57,7 +51,7 @@ export default function CTAStrip() {
           transition={{ delay: 0.35 }}
           className="font-sans text-white/55 text-sm mb-8"
         >
-          {finalCta.sub}
+          "फक्त कुंडली पाहू नका... तर व्यक्तीच्या जीवनातील घटना आत्मविश्वासाने सांगायला शिका!"
         </motion.p>
 
         <motion.div
@@ -74,7 +68,7 @@ export default function CTAStrip() {
             className="btn-whatsapp py-5 px-12 text-lg"
           >
             <WhatsAppIcon className="w-6 h-6" />
-            {finalCta.button}
+            REGISTER NOW
           </a>
           <a
             href={`tel:${brand.phone}`}
@@ -84,7 +78,6 @@ export default function CTAStrip() {
           </a>
         </motion.div>
 
-        {/* Free badge */}
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -110,3 +103,4 @@ function WhatsAppIcon({ className }) {
     </svg>
   )
 }
+

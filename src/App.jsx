@@ -1,13 +1,17 @@
-import Navbar from './components/Navbar'
+﻿import Navbar from './components/Navbar'
 import FloatingWhatsApp from './components/FloatingWhatsApp'
 import Hero from './sections/Hero'
+import EmotionalHookStrip from './sections/EmotionalHookStrip'
 import WorkshopSection from './sections/WorkshopSection'
 import PainPointSection from './sections/PainPointSection'
 import InstructorSection from './sections/InstructorSection'
+import PremiumWorkshopBlock from './sections/PremiumWorkshopBlock'
 import LearnSection from './sections/LearnSection'
 import BenefitsSection from './sections/BenefitsSection'
 import CTAStrip from './sections/CTAStrip'
+import WhoForSection from './sections/WhoForSection'
 import TestimonialsSection from './sections/TestimonialsSection'
+import WorkshopFeaturesSection from './sections/WorkshopFeaturesSection'
 import FAQSection from './sections/FAQSection'
 import ContactSection from './sections/ContactSection'
 import Footer from './sections/Footer'
@@ -21,27 +25,46 @@ export default function App() {
       <Navbar />
       <main>
         <Hero />
+        <EmotionalHookStrip />
         <WorkshopSection />
         <PainPointSection />
         <InstructorSection />
-        {/* CTA after instructor */}
         <CTAStrip />
+        <PremiumWorkshopBlock />
         <LearnSection />
         <BenefitsSection />
-        {/* CTA strip repeated */}
-        <section className="py-10 flex justify-center"
-          style={{ background: 'linear-gradient(135deg, rgba(22,28,74,0.4) 0%, rgba(5,6,15,0.8) 100%)' }}>
-          <a
-            href="https://chat.whatsapp.com/GxHhcw7RP0AD8lqWDDy9Re"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn-whatsapp py-5 px-12 text-lg"
-          >
-            <WhatsAppIcon className="w-6 h-6" />
-            Join WhatsApp Group – FREE Workshop!
-          </a>
+
+        <section
+          className="py-10"
+          style={{ background: 'linear-gradient(135deg, rgba(22,28,74,0.4) 0%, rgba(5,6,15,0.8) 100%)' }}
+        >
+          <div className="w-full max-w-4xl px-4 mx-auto">
+            <div
+              className="rounded-2xl p-5 md:p-6 mb-5 text-center border border-red-400/40"
+              style={{ background: 'linear-gradient(135deg, rgba(120,20,10,0.35) 0%, rgba(10,14,39,0.9) 100%)', boxShadow: '0 0 36px rgba(239,68,68,0.25)' }}
+            >
+              <h3 className="font-marathi text-xl md:text-2xl text-rose-300 font-bold mb-2">⚠️ मर्यादित प्रवेश</h3>
+              <p className="font-marathi text-white/85">ही कार्यशाळा Interactive असल्यामुळे फक्त मर्यादित विद्यार्थ्यांनाच प्रवेश दिला जाईल.</p>
+              <p className="font-marathi text-amber-300 font-bold mt-3">⏳ Seats Filling Fast • 🔥 आजच आपली जागा निश्चित करा</p>
+            </div>
+
+            <div className="flex justify-center">
+              <a
+                href="https://chat.whatsapp.com/GxHhcw7RP0AD8lqWDDy9Re"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-whatsapp py-5 px-12 text-lg"
+              >
+                <WhatsAppIcon className="w-6 h-6" />
+                Join WhatsApp Group - FREE Workshop!
+              </a>
+            </div>
+          </div>
         </section>
+
+        <WhoForSection />
         <TestimonialsSection />
+        <WorkshopFeaturesSection />
         <FAQSection />
         <ContactSection />
         <CTAStrip />
@@ -60,3 +83,4 @@ function WhatsAppIcon({ className }) {
     </svg>
   )
 }
+

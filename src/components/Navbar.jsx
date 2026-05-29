@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+﻿import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { brand, navLinks } from '../data/siteContent'
 import { useActiveSection } from '../hooks/useScrollReveal'
@@ -33,7 +33,6 @@ export default function Navbar() {
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between h-16 md:h-20">
-          {/* Logo */}
           <a
             href="#home"
             onClick={(e) => { e.preventDefault(); handleNav('#home') }}
@@ -57,7 +56,6 @@ export default function Navbar() {
             </div>
           </a>
 
-          {/* Desktop Links */}
           <div className="hidden md:flex items-center gap-1">
             {navLinks.map((link) => {
               const sectionId = link.href.replace('#', '')
@@ -84,20 +82,31 @@ export default function Navbar() {
             })}
           </div>
 
-          {/* CTA */}
-          <div className="hidden md:block">
-            <a
+          <div className="hidden md:flex items-center gap-2">
+            <motion.a
               href={brand.whatsappGroup}
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-whatsapp text-sm py-2.5 px-5"
+              className="btn-whatsapp attention-shake text-sm py-2.5 px-4"
+              animate={{ x: [0, -3.5, 3.5, -2.5, 2.5, 0], rotate: [0, -0.7, 0.7, -0.3, 0.3, 0] }}
+              transition={{ duration: 0.75, repeat: Infinity, repeatDelay: 1.8, ease: 'easeInOut' }}
             >
               <WhatsAppIcon className="w-4 h-4" />
               Join Now
-            </a>
+            </motion.a>
+            <motion.a
+              href={brand.whatsappCommunity}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-gold attention-shake-alt text-sm py-2.5 px-4"
+              animate={{ x: [0, 3.5, -3.5, 2.5, -2.5, 0], rotate: [0, 0.7, -0.7, 0.3, -0.3, 0] }}
+              transition={{ duration: 0.75, repeat: Infinity, repeatDelay: 2.1, ease: 'easeInOut' }}
+            >
+              <WhatsAppIcon className="w-4 h-4" />
+              Community
+            </motion.a>
           </div>
 
-          {/* Mobile Hamburger */}
           <button
             className="md:hidden p-2 text-gold-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-gold-400 rounded-lg"
             onClick={() => setMenuOpen(!menuOpen)}
@@ -113,7 +122,6 @@ export default function Navbar() {
         </div>
       </motion.nav>
 
-      {/* Mobile Menu */}
       <AnimatePresence>
         {menuOpen && (
           <motion.div
@@ -136,16 +144,32 @@ export default function Navbar() {
                   {link.label}
                 </motion.button>
               ))}
-              <a
+
+              <motion.a
                 href={brand.whatsappGroup}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-whatsapp mt-2 text-sm"
+                className="btn-whatsapp attention-shake mt-2 text-sm"
                 onClick={() => setMenuOpen(false)}
+                animate={{ x: [0, -3, 3, -2, 2, 0], rotate: [0, -0.6, 0.6, 0] }}
+                transition={{ duration: 0.7, repeat: Infinity, repeatDelay: 1.8, ease: 'easeInOut' }}
               >
                 <WhatsAppIcon className="w-4 h-4" />
                 WhatsApp Group Join करा
-              </a>
+              </motion.a>
+
+              <motion.a
+                href={brand.whatsappCommunity}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-gold attention-shake-alt mt-2 text-sm"
+                onClick={() => setMenuOpen(false)}
+                animate={{ x: [0, 3, -3, 2, -2, 0], rotate: [0, 0.6, -0.6, 0] }}
+                transition={{ duration: 0.7, repeat: Infinity, repeatDelay: 2.1, ease: 'easeInOut' }}
+              >
+                <WhatsAppIcon className="w-4 h-4" />
+                WhatsApp Community Join करा
+              </motion.a>
             </div>
           </motion.div>
         )}

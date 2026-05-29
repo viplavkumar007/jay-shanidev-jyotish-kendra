@@ -10,6 +10,7 @@ export const brand = {
   phoneDisplay: '+91 75075 36502',
   email: 'jayshanidevjyotishkendra@gmail.com',
   whatsappGroup: 'https://chat.whatsapp.com/GxHhcw7RP0AD8lqWDDy9Re',
+  whatsappCommunity: 'https://chat.whatsapp.com/GxgEgnqrYeu1hIm2rGopN8',
   whatsappDirect: 'https://wa.me/917507536502'
 };
 
